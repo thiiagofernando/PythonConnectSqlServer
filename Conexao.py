@@ -9,9 +9,10 @@ password  ='12345678'
 cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 
-# variareis para o insert
+# variaveis para o insert com nome e email
 nome = "Thiago"
 email = "Thiago.Fernando@msn.com"
+
 #realiza um insert na tabela Pessoas
 cursor.execute("insert into [dbo].[Pessoas](Nome,Email) values('"+nome+"','"+email+"')")
 cnxn.commit()
